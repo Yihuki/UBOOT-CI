@@ -85,7 +85,7 @@ jobs:
 
             key="$soc:$board"
             if [[ $rest == *_multi_layout ]]; then
-              lines_map["$key"]="SOC=$soc BOARD=$board VERSION=$WRT_VER MULTI_LAYOUT=1 ./build.sh"
+              lines_map["$key"]="SOC=$soc BOARD=$board VERSION=$WRT_VER MULTI_LAYOUT=1 FIXED_MTDPARTS=0 ./build.sh"
             elif [[ -z "${lines_map[$key]}" ]]; then
               lines_map["$key"]="SOC=$soc BOARD=$board VERSION=$WRT_VER ./build.sh"
             fi
